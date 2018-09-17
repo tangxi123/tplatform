@@ -1,6 +1,8 @@
 package com.tserve.config;
 
+import com.tserve.security.CustomUserDetailService;
 import com.tserve.security.JwtAuthenticationEntryPoint;
+import com.tserve.security.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public JwtAuthenticationFilter jwtAuthenticationFilter() {
-        return new JwtAutenticationFilter();
+        return new JwtAuthenticationFilter();
     }
 
     @Override
