@@ -1,4 +1,4 @@
-package com.tserve.pojo;
+package com.tserve.model;
 
 public enum RoleName {
     ROLE_USER,

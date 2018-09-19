@@ -1,12 +1,11 @@
-package com.tserve.pojo;
+package com.tserve.model;
 
 import org.hibernate.annotations.NaturalId;
-import org.springframework.boot.autoconfigure.web.ResourceProperties;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="roles")
+@Table(name = "roles")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,6 +17,10 @@ public class Role {
     private RoleName name;
 
     public Role(){}
+
+    public Role(RoleName name){
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
@@ -33,10 +36,5 @@ public class Role {
 
     public void setName(RoleName name) {
         this.name = name;
-    }
-
-    public Role(RoleName name){
-        this.name = name;
-
     }
 }
